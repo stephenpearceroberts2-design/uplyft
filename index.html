@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uplyft — Operational Consultancy for Serviced Accommodation</title>
+  <meta name="description" content="We help UK serviced accommodation operators streamline their business through automation and AI. Operational consultancy that delivers results, not courses.">
+  <meta name="keywords" content="serviced accommodation, SA operators, property management, AI automation, operational consultancy, UK">
+  <meta property="og:title" content="Uplyft — Operational Consultancy for Serviced Accommodation">
+  <meta property="og:description" content="We help SA operators streamline their business through automation and AI. Done for you, end to end.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='4' y='18' width='6' height='6' rx='1.5' fill='%23AFA9EC'/><rect x='12' y='12' width='6' height='12' rx='1.5' fill='%237F77DD'/><rect x='20' y='6' width='6' height='18' rx='1.5' fill='%23534AB7'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --purple-50: #EEEDFE;
+      --purple-100: #CECBF6;
+      --purple-200: #AFA9EC;
+      --purple-400: #7F77DD;
+      --purple-600: #534AB7;
+      --purple-800: #3C3489;
+      --purple-900: #26215C;
+      --gray-50: #F8F7F6;
+      --gray-100: #EEECEA;
+      --gray-200: #D8D6D0;
+      --gray-400: #888780;
+      --gray-600: #5F5E5A;
+      --gray-900: #1A1A18;
+      --white: #FFFFFF;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--gray-900); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    .animate-in { animation: fadeUp 0.7s ease-out forwards; opacity: 0; }
+    .delay-1 { animation-delay: 0.1s; } .delay-2 { animation-delay: 0.2s; } .delay-3 { animation-delay: 0.3s; } .delay-4 { animation-delay: 0.4s; }
+
+    /* Navigation */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(0,0,0,0.04); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: var(--gray-900); }
+    .logo-mark { display: flex; align-items: flex-end; gap: 3px; }
+    .logo-mark span { display: block; border-radius: 2px; }
+    .logo-mark span:nth-child(1) { width: 8px; height: 8px; background: var(--purple-200); }
+    .logo-mark span:nth-child(2) { width: 8px; height: 14px; background: var(--purple-400); }
+    .logo-mark span:nth-child(3) { width: 8px; height: 20px; background: var(--purple-600); }
+    .logo-text { font-family: var(--font-body); font-weight: 600; font-size: 1.15rem; letter-spacing: -0.01em; }
+    .nav-links { display: flex; align-items: center; gap: 2.5rem; }
+    .nav-links a { text-decoration: none; color: var(--gray-600); font-size: 0.9rem; font-weight: 500; transition: color 0.2s ease; }
+    .nav-links a:hover { color: var(--gray-900); }
+    .nav-cta { display: inline-flex; align-items: center; padding: 0.65rem 1.25rem; background: var(--gray-900); color: var(--white) !important; border-radius: 6px; transition: all 0.2s ease; }
+    .nav-cta:hover { background: var(--purple-900); }
+    .mobile-menu-btn { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 5px; }
+    .mobile-menu-btn span { width: 24px; height: 2px; background: var(--gray-900); transition: all 0.3s ease; }
+    .mobile-menu-btn.active span:first-child { transform: rotate(45deg) translate(5px, 5px); }
+    .mobile-menu-btn.active span:last-child { transform: rotate(-45deg) translate(5px, -5px); }
+    .mobile-menu { display: none; position: fixed; top: 70px; left: 0; right: 0; background: var(--white); padding: 1.5rem 2rem; border-bottom: 1px solid var(--gray-100); z-index: 99; flex-direction: column; gap: 1rem; }
+    .mobile-menu.active { display: flex; }
+    .mobile-menu a { text-decoration: none; color: var(--gray-600); font-size: 1rem; font-weight: 500; padding: 0.5rem 0; }
+    .mobile-cta { display: inline-flex; justify-content: center; padding: 0.85rem 1.5rem; background: var(--gray-900); color: var(--white) !important; border-radius: 6px; margin-top: 0.5rem; }
+
+    /* Hero */
+    .hero { padding: 10rem 2rem 6rem; background: var(--white); }
+    .hero-inner { max-width: 800px; margin: 0 auto; }
+    .hero-label { display: inline-block; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--purple-600); margin-bottom: 1.5rem; }
+    h1 { font-family: var(--font-display); font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 600; line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 1.5rem; color: var(--gray-900); }
+    .hero-description { font-size: 1.2rem; color: var(--gray-600); margin-bottom: 2.5rem; max-width: 600px; line-height: 1.7; }
+    .hero-cta { display: inline-flex; align-items: center; gap: 0.5rem; padding: 1rem 1.75rem; background: var(--gray-900); color: var(--white); text-decoration: none; font-weight: 600; font-size: 1rem; border-radius: 6px; transition: all 0.2s ease; }
+    .hero-cta:hover { background: var(--purple-900); }
+    .hero-stats { margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--gray-100); display: flex; gap: 4rem; }
+    .stat { display: flex; flex-direction: column; }
+    .stat-number { font-family: var(--font-display); font-size: 2.25rem; font-weight: 600; color: var(--gray-900); line-height: 1; }
+    .stat-label { font-size: 0.9rem; color: var(--gray-400); margin-top: 0.35rem; }
+
+    /* Sections */
+    section { padding: 6rem 2rem; }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--purple-600); margin-bottom: 1rem; }
+    h2 { font-family: var(--font-display); font-size: clamp(1.75rem, 3.5vw, 2.25rem); font-weight: 600; line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 1rem; color: var(--gray-900); }
+    .section-description { font-size: 1.1rem; color: var(--gray-600); max-width: 550px; line-height: 1.7; }
+
+    /* Reality */
+    .reality { background: var(--gray-50); }
+    .reality-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3rem; align-items: start; }
+    .reality-content p { color: var(--gray-600); font-size: 1.05rem; line-height: 1.8; margin-bottom: 1.5rem; }
+    .reality-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+    .reality-item { display: flex; gap: 0.75rem; align-items: flex-start; }
+    .reality-item span { color: var(--purple-600); font-size: 1.1rem; line-height: 1.5; }
+    .reality-item p { margin: 0; color: var(--gray-600); font-size: 1rem; }
+    .reality-visual { background: var(--white); border-radius: 12px; padding: 2.5rem; border: 1px solid var(--gray-100); }
+    .reality-stat { font-family: var(--font-display); font-size: 4rem; font-weight: 600; color: var(--purple-600); line-height: 1; }
+    .reality-stat-label { font-size: 1.1rem; color: var(--gray-600); margin-top: 0.5rem; }
+    .reality-stat-context { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-100); font-size: 0.95rem; color: var(--gray-400); line-height: 1.6; }
+
+    /* Services */
+    .services { background: var(--white); }
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+    .service-card { padding: 2rem; background: var(--gray-50); border-radius: 10px; border: 1px solid var(--gray-100); }
+    .service-number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: var(--purple-600); color: var(--white); border-radius: 50%; font-weight: 600; font-size: 0.9rem; margin-bottom: 1.25rem; }
+    .service-card h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--gray-900); }
+    .service-card p { color: var(--gray-600); font-size: 0.95rem; line-height: 1.6; }
+
+    /* Process */
+    .process { background: var(--purple-900); color: var(--white); }
+    .process .section-label { color: var(--purple-200); }
+    .process h2 { color: var(--white); }
+    .process .section-description { color: var(--purple-100); }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .process-step { padding: 1.75rem; background: rgba(255,255,255,0.05); border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); }
+    .process-step-number { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--purple-200); margin-bottom: 1rem; }
+    .process-step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .process-step p { color: var(--purple-100); font-size: 0.9rem; line-height: 1.6; }
+
+    /* Examples */
+    .examples { background: var(--gray-50); }
+    .examples-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+    .example-card { background: var(--white); border-radius: 12px; border: 1px solid var(--gray-100); overflow: hidden; }
+    .example-header { padding: 1.5rem 1.5rem 0; }
+    .example-tag { display: inline-block; padding: 0.35rem 0.75rem; background: var(--purple-50); color: var(--purple-600); font-size: 0.75rem; font-weight: 600; border-radius: 4px; }
+    .example-card h3 { padding: 1rem 1.5rem; font-size: 1.15rem; font-weight: 600; color: var(--gray-900); }
+    .example-content { padding: 0 1.5rem; }
+    .example-section { margin-bottom: 1.25rem; }
+    .example-section h4 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--gray-400); margin-bottom: 0.5rem; }
+    .example-section p { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; }
+    .example-results { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 1.5rem; background: var(--gray-50); margin-top: 1rem; }
+    .example-result { display: flex; flex-direction: column; }
+    .result-number { font-family: var(--font-display); font-size: 1.5rem; font-weight: 600; color: var(--purple-600); line-height: 1.2; }
+    .result-label { font-size: 0.8rem; color: var(--gray-400); margin-top: 0.25rem; }
+
+    /* Results */
+    .results { background: var(--white); }
+    .results-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .result-card { padding: 2rem; background: var(--gray-50); border-radius: 10px; border: 1px solid var(--gray-100); display: flex; gap: 1.25rem; align-items: flex-start; }
+    .result-icon { width: 44px; height: 44px; background: var(--purple-50); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--purple-600); }
+    .result-content h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.35rem; color: var(--gray-900); }
+    .result-content p { color: var(--gray-600); font-size: 0.9rem; line-height: 1.5; }
+
+    /* Clients */
+    .clients { background: var(--gray-50); }
+    .clients-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+    .client-card { padding: 2rem; background: var(--white); border-radius: 10px; border: 1px solid var(--gray-100); }
+    .client-card h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 0.75rem; color: var(--gray-900); }
+    .client-card p { color: var(--gray-600); font-size: 0.9rem; line-height: 1.6; }
+
+    /* Not Section */
+    .not-section { background: var(--white); padding: 5rem 2rem; border-top: 1px solid var(--gray-100); }
+    .not-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .not-section h2 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    .not-description { color: var(--gray-600); font-size: 1rem; margin-bottom: 2rem; }
+    .not-items { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; color: var(--gray-400); font-size: 0.95rem; margin-bottom: 2rem; }
+    .not-items span { display: flex; align-items: center; gap: 0.5rem; }
+    .not-alternative { font-size: 1.1rem; font-weight: 600; color: var(--purple-600); }
+
+    /* Enquiry */
+    .enquiry { background: var(--gray-50); padding: 6rem 2rem; }
+    .enquiry-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .enquiry-content { padding-right: 2rem; }
+    .enquiry-content h2 { margin-bottom: 1rem; }
+    .enquiry-content > p { color: var(--gray-600); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem; }
+    .enquiry-benefits { display: flex; flex-direction: column; gap: 1rem; }
+    .enquiry-benefit { display: flex; align-items: center; gap: 0.75rem; color: var(--gray-600); font-size: 0.95rem; }
+    .enquiry-benefit svg { color: var(--purple-600); flex-shrink: 0; }
+    .enquiry-form { background: var(--white); padding: 2.5rem; border-radius: 12px; border: 1px solid var(--gray-100); }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label { display: block; font-size: 0.9rem; font-weight: 500; color: var(--gray-900); margin-bottom: 0.5rem; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.85rem 1rem; font-size: 1rem; font-family: var(--font-body); border: 1px solid var(--gray-200); border-radius: 6px; background: var(--white); color: var(--gray-900); transition: all 0.2s ease; }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--purple-400); box-shadow: 0 0 0 3px rgba(127,119,221,0.1); }
+    .form-group textarea { min-height: 100px; resize: vertical; }
+    .form-group select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%235F5E5A' viewBox='0 0 16 16'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+    .form-submit { width: 100%; padding: 1rem; background: var(--gray-900); color: var(--white); font-size: 1rem; font-weight: 600; font-family: var(--font-body); border: none; border-radius: 6px; cursor: pointer; transition: all 0.2s ease; }
+    .form-submit:hover { background: var(--purple-900); }
+    .form-submit:disabled { opacity: 0.7; cursor: not-allowed; }
+    .form-note { margin-top: 1rem; font-size: 0.85rem; color: var(--gray-400); text-align: center; }
+    .form-success { text-align: center; padding: 2rem; }
+    .form-success h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--gray-900); }
+    .form-success p { color: var(--gray-600); }
+
+    /* Footer */
+    footer { padding: 3rem 2rem; background: var(--gray-900); color: var(--gray-400); }
+    .footer-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer-logo { display: flex; align-items: center; gap: 0.5rem; }
+    .footer-logo .logo-mark span:nth-child(1) { background: var(--purple-400); }
+    .footer-logo .logo-mark span:nth-child(2) { background: var(--purple-200); }
+    .footer-logo .logo-mark span:nth-child(3) { background: var(--purple-100); }
+    .footer-logo .logo-text { color: var(--white); font-weight: 600; font-size: 1rem; }
+    footer p { font-size: 0.85rem; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-stats { gap: 2.5rem; }
+      .reality-grid, .services-grid, .examples-grid, .results-grid, .clients-grid, .enquiry-inner { grid-template-columns: 1fr; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .enquiry-content { padding-right: 0; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-menu-btn { display: flex; }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.5rem; }
+      .hero { padding: 8rem 1.5rem 4rem; }
+      .hero-stats { flex-direction: column; gap: 1.5rem; }
+      section { padding: 4rem 1.5rem; }
+      .process-steps { grid-template-columns: 1fr; }
+      .not-items { flex-direction: column; gap: 1rem; }
+      .footer-inner { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-mark"><span></span><span></span><span></span></div>
+        <span class="logo-text">UPLYFT</span>
+      </a>
+      <div class="nav-links">
+        <a href="#services">What we do</a>
+        <a href="#process">How it works</a>
+        <a href="#examples">Examples</a>
+        <a href="#enquiry" class="nav-cta">Request an audit</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle menu"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a href="#services">What we do</a>
+    <a href="#process">How it works</a>
+    <a href="#examples">Examples</a>
+    <a href="#enquiry" class="mobile-cta">Request an audit</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-label animate-in">Operational Consultancy</span>
+      <h1 class="animate-in delay-1">We help serviced accommodation operators run smarter</h1>
+      <p class="hero-description animate-in delay-2">We audit your business, find what's eating your time, and implement systems that fix it — through automation and AI. You see the results. We do the work.</p>
+      <a href="#enquiry" class="hero-cta animate-in delay-3">Request a free audit</a>
+      <div class="hero-stats animate-in delay-4">
+        <div class="stat"><span class="stat-number">15+</span><span class="stat-label">hours saved per week</span></div>
+        <div class="stat"><span class="stat-number">80%</span><span class="stat-label">reduction in repetitive work</span></div>
+        <div class="stat"><span class="stat-number">100%</span><span class="stat-label">done for you</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reality">
+    <div class="section-inner">
+      <span class="section-label">The reality</span>
+      <h2>Operations don't scale on their own</h2>
+      <div class="reality-grid">
+        <div class="reality-content">
+          <p>You started your SA business for freedom and income. But somewhere along the way, you became the bottleneck — answering the same guest questions, fielding staff queries, putting out fires.</p>
+          <p>The systems that worked at 5 properties break at 15. Adding more units just adds more stress.</p>
+          <div class="reality-list">
+            <div class="reality-item"><span>→</span><p>Repetitive guest queries eating your time</p></div>
+            <div class="reality-item"><span>→</span><p>Staff who can't find answers without asking you</p></div>
+            <div class="reality-item"><span>→</span><p>Processes stuck in your head, not documented</p></div>
+            <div class="reality-item"><span>→</span><p>No bandwidth left for growth</p></div>
+          </div>
+        </div>
+        <div class="reality-visual">
+          <div class="reality-stat">15-20</div>
+          <div class="reality-stat-label">hours per week lost to operational noise</div>
+          <p class="reality-stat-context">That's two full working days. Every week. Spent on things that don't grow your business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="section-inner">
+      <span class="section-label">What we do</span>
+      <h2>Consultancy that actually delivers</h2>
+      <p class="section-description">We don't give you recommendations and wish you luck. We diagnose, design, and implement — end to end.</p>
+      <div class="services-grid">
+        <div class="service-card"><div class="service-number">1</div><h3>Diagnose</h3><p>We dig into how you handle guest comms, staff questions, issue resolution, and day-to-day operations. We find the leaks.</p></div>
+        <div class="service-card"><div class="service-number">2</div><h3>Build</h3><p>We design and implement systems that fix the bottlenecks — including custom AI agents trained on your business, your properties, your processes.</p></div>
+        <div class="service-card"><div class="service-number">3</div><h3>Manage</h3><p>We don't disappear after launch. We run, optimise, and evolve your systems as your business grows. You never touch it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <div class="section-inner">
+      <span class="section-label">How it works</span>
+      <h2>From enquiry to results</h2>
+      <p class="section-description">A straightforward process with no surprises.</p>
+      <div class="process-steps">
+        <div class="process-step"><div class="process-step-number">01</div><h3>You submit an enquiry</h3><p>Tell us about your business and what's not working. Takes 2 minutes.</p></div>
+        <div class="process-step"><div class="process-step-number">02</div><h3>We review and respond</h3><p>We'll come back with initial thoughts and questions within 48 hours.</p></div>
+        <div class="process-step"><div class="process-step-number">03</div><h3>Discovery session</h3><p>A conversation about your operations — we'll walk through common challenges and see what resonates.</p></div>
+        <div class="process-step"><div class="process-step-number">04</div><h3>We implement and manage</h3><p>We build the solution, integrate it, and handle everything ongoing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="examples" id="examples">
+    <div class="section-inner">
+      <span class="section-label">Examples</span>
+      <h2>What we've built for others</h2>
+      <p class="section-description">Solutions we've designed and implemented for SA operators facing similar challenges.</p>
+      <div class="examples-grid">
+        <div class="example-card">
+          <div class="example-header"><span class="example-tag">Guest communication</span></div>
+          <h3>AI guest communication agent</h3>
+          <div class="example-content">
+            <div class="example-section"><h4>The challenge</h4><p>Operator with 18 properties spending 3+ hours daily on guest messages. Delayed responses were hurting reviews.</p></div>
+            <div class="example-section"><h4>What we built</h4><p>Custom AI agent trained on all 18 properties — check-in procedures, amenities, local recommendations, house rules. Integrated with WhatsApp and booking platforms.</p></div>
+          </div>
+          <div class="example-results">
+            <div class="example-result"><span class="result-number">80%</span><span class="result-label">queries handled automatically</span></div>
+            <div class="example-result"><span class="result-number">3hrs → 20min</span><span class="result-label">daily time on messages</span></div>
+          </div>
+        </div>
+        <div class="example-card">
+          <div class="example-header"><span class="example-tag">Staff operations</span></div>
+          <h3>Internal staff AI assistant</h3>
+          <div class="example-content">
+            <div class="example-section"><h4>The challenge</h4><p>Founder getting 20+ WhatsApp messages daily from cleaners and maintenance staff. Couldn't step away from the business.</p></div>
+            <div class="example-section"><h4>What we built</h4><p>AI assistant trained on all SOPs, property quirks, common issues. Staff message the bot instead of the founder. Escalates genuinely urgent issues.</p></div>
+          </div>
+          <div class="example-results">
+            <div class="example-result"><span class="result-number">90%</span><span class="result-label">reduction in interruptions</span></div>
+            <div class="example-result"><span class="result-number">2 weeks</span><span class="result-label">holiday without a single call</span></div>
+          </div>
+        </div>
+        <div class="example-card">
+          <div class="example-header"><span class="example-tag">Operations automation</span></div>
+          <h3>Turnover automation system</h3>
+          <div class="example-content">
+            <div class="example-section"><h4>The challenge</h4><p>25 units with manual task assignment, no visibility on cleaning status, constant coordination calls. Scaling felt impossible.</p></div>
+            <div class="example-section"><h4>What we built</h4><p>Automated flow from checkout to ready-for-guest. Auto-assigns cleaners, tracks completion, triggers quality checks, updates booking system.</p></div>
+          </div>
+          <div class="example-results">
+            <div class="example-result"><span class="result-number">Zero</span><span class="result-label">coordination calls needed</span></div>
+            <div class="example-result"><span class="result-number">+8 units</span><span class="result-label">added with same team</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="results">
+    <div class="section-inner">
+      <span class="section-label">Results</span>
+      <h2>What changes when we're done</h2>
+      <div class="results-grid">
+        <div class="result-card">
+          <div class="result-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div class="result-content"><h3>Time back</h3><p>15+ hours per week freed up from repetitive operational tasks. Spend it on growth, or don't — it's yours.</p></div>
+        </div>
+        <div class="result-card">
+          <div class="result-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div class="result-content"><h3>Empowered team</h3><p>Staff can self-serve answers instead of asking you. You stop being the bottleneck.</p></div>
+        </div>
+        <div class="result-card">
+          <div class="result-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div class="result-content"><h3>Consistent quality</h3><p>Every guest gets the same great experience, whether you're involved or not.</p></div>
+        </div>
+        <div class="result-card">
+          <div class="result-icon"><svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
+          <div class="result-content"><h3>Ready to scale</h3><p>Add properties without adding proportional headcount or stress.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients">
+    <div class="section-inner">
+      <span class="section-label">Who we work with</span>
+      <h2>SA operators who want to grow</h2>
+      <div class="clients-grid">
+        <div class="client-card"><h3>Portfolio operators</h3><p>Running 10+ properties and feeling the strain. Your systems worked at 5 units but they're breaking now. Time to professionalise.</p></div>
+        <div class="client-card"><h3>Growth-focused founders</h3><p>You want to add more units but you're already maxed out. You need to fix operations before you can scale.</p></div>
+        <div class="client-card"><h3>Time-poor owners</h3><p>SA was supposed to be semi-passive. Instead you're glued to your phone. You want someone to fix it, not teach you how.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="not-section">
+    <div class="not-inner">
+      <h2>What we're not</h2>
+      <p class="not-description">We know the SA space is full of people selling courses and coaching. That's not us.</p>
+      <div class="not-items">
+        <span><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg> Course sellers</span>
+        <span><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg> Training providers</span>
+        <span><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg> Coaches</span>
+        <span><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg> Software vendors</span>
+      </div>
+      <p class="not-alternative">We're consultants. We do the work. You see the results.</p>
+    </div>
+  </section>
+
+  <section class="enquiry" id="enquiry">
+    <div class="enquiry-inner">
+      <div class="enquiry-content">
+        <span class="section-label">Get started</span>
+        <h2>Request a free audit</h2>
+        <p>Tell us about your business and what's not working. We'll review your enquiry and come back with initial thoughts — no obligation, no pressure.</p>
+        <div class="enquiry-benefits">
+          <div class="enquiry-benefit"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Free, no obligation</div>
+          <div class="enquiry-benefit"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Response within 48 hours</div>
+          <div class="enquiry-benefit"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Actionable insights even if we don't work together</div>
+        </div>
+      </div>
+      <form class="enquiry-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div class="form-group"><label for="name">Your name</label><input type="text" id="name" name="name" required></div>
+        <div class="form-group"><label for="email">Email address</label><input type="email" id="email" name="email" required></div>
+        <div class="form-group"><label for="properties">How many properties do you manage?</label><select id="properties" name="properties" required><option value="">Select...</option><option value="1-5">1-5</option><option value="6-15">6-15</option><option value="16-30">16-30</option><option value="30+">30+</option></select></div>
+        <div class="form-group"><label for="challenge">What's your biggest operational challenge right now?</label><textarea id="challenge" name="challenge" placeholder="E.g. spending too much time on guest messages, staff always asking me questions, can't step away from the business..." required></textarea></div>
+        <button type="submit" class="form-submit">Submit enquiry</button>
+        <p class="form-note">We'll review your enquiry and respond within 48 hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <div class="logo-mark"><span></span><span></span><span></span></div>
+        <span class="logo-text">UPLYFT</span>
+      </div>
+      <p>© 2026 Uplyft. Operational consultancy for serviced accommodation.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+      const mobileMenu = document.querySelector('.mobile-menu');
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+          this.classList.toggle('active');
+          mobileMenu.classList.toggle('active');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+          });
+        });
+      }
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            const offset = 80;
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+          }
+        });
+      });
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      document.querySelectorAll('.service-card, .process-step, .result-card, .client-card, .reality-item, .example-card').forEach((el, i) => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.5s ease-out ' + (i * 0.05) + 's';
+        observer.observe(el);
+      });
+      const form = document.getElementById('contact-form');
+      if (form) {
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const submitBtn = this.querySelector('.form-submit');
+          const originalText = submitBtn.textContent;
+          submitBtn.textContent = 'Sending...';
+          submitBtn.disabled = true;
+          try {
+            const response = await fetch(this.action, { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } });
+            if (response.ok) {
+              this.innerHTML = '<div class="form-success"><h3>Thank you!</h3><p>We\'ve received your enquiry and will be in touch within 48 hours.</p></div>';
+            } else {
+              throw new Error('Form submission failed');
+            }
+          } catch (error) {
+            submitBtn.textContent = 'Something went wrong. Try again.';
+            submitBtn.disabled = false;
+            setTimeout(() => { submitBtn.textContent = originalText; }, 3000);
+          }
+        });
+      }
+      const nav = document.querySelector('nav');
+      if (nav) {
+        window.addEventListener('scroll', () => {
+          nav.style.boxShadow = window.scrollY > 50 ? '0 2px 20px rgba(0,0,0,0.05)' : 'none';
+        });
+      }
+    });
+  </script>
+</body>
+</html>
