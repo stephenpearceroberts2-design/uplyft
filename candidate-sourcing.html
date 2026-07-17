@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Uplyft Talent: Autonomous Growth for Recruitment Agencies</title>
-<meta name="description" content="One AI-led platform, two engines of growth: find better candidates faster, and win new clients without your desk ever having to stop and prospect. Fully managed, from £299/month.">
+<title>Uplyft Talent: Candidate Generation System for Specialist Recruiters</title>
+<meta name="description" content="Stop wasting recruiter time on manual LinkedIn outreach. Uplyft Talent automates candidate search, connection, and AI-powered conversation, so your team closes more placements.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -1344,7 +1344,7 @@ footer {
   .how-header { margin-bottom: 2rem; }
   .how-card { padding: 1.5rem; }
 
-  /* Pipeline flow, step cards */
+  /* Pipeline flow: step cards */
   .steps-section-grid {
     grid-template-columns: 1fr !important;
     gap: 1rem !important;
@@ -1407,7 +1407,7 @@ footer {
   }
   .footer-links { flex-wrap: wrap; gap: 1rem; }
 
-  /* Inline style sections, force single column */
+  /* Inline style sections: force single column */
   section > div[style*="grid-template-columns: 1fr 1fr"],
   section > div > div[style*="grid-template-columns: 1fr 1fr"],
   section > div[style*="grid-template-columns:1fr 1fr"] {
@@ -1435,13 +1435,13 @@ footer {
   * { max-width: 100%; }
   img, video, iframe { max-width: 100%; height: auto; }
 
-  /* Hero card mockup, hide on mobile */
+  /* Hero card mockup: hide on mobile */
   .hero-card { display: none; }
 }
 </style>
 <style>
 @media (max-width: 640px) {
-  /* Pipeline 3-step flow, override inline grid */
+  /* Pipeline 3-step flow: override inline grid */
   .reveal[style*="grid-template-columns: 1fr 40px"] {
     display: flex !important;
     flex-direction: column !important;
@@ -1452,7 +1452,7 @@ footer {
     display: none !important;
   }
 
-  /* Database callout, 2 col to 1 col */
+  /* Database callout: 2 col to 1 col */
   .reveal[style*="grid-template-columns:1fr 1fr"],
   div[style*="grid-template-columns:1fr 1fr"],
   div[style*="grid-template-columns: 1fr 1fr"] {
@@ -1496,7 +1496,7 @@ footer {
   /* Stat cards */
   .hc-stats { grid-template-columns: repeat(3, 1fr); }
 
-  /* Audience items, remove hover indent */
+  /* Audience items: remove hover indent */
   .audience-item:hover { padding-left: 0 !important; }
 
   /* CTA vertical line */
@@ -1511,112 +1511,6 @@ footer {
     overflow-wrap: break-word;
   }
 }
-
-/* ══════════════════════════════
-   PATHS (homepage split)
-══════════════════════════════ */
-#paths {
-  background: var(--ink2);
-  padding: 8rem 3rem;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
-}
-.paths-header { text-align: center; margin-bottom: 4rem; }
-.paths-header .eyebrow { justify-content: center; display: flex; }
-.paths-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-.path-card {
-  background: var(--charcoal);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  padding: 3rem 2.5rem;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  transition: border-color 0.3s, transform 0.3s;
-}
-.path-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.path-card:hover {
-  border-color: var(--gold-rule);
-  transform: translateY(-4px);
-}
-.path-card:hover::before { opacity: 1; }
-.path-eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.25rem;
-}
-.path-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.8rem, 2.6vw, 2.3rem);
-  font-weight: 300;
-  line-height: 1.15;
-  color: var(--cream);
-  margin-bottom: 1rem;
-}
-.path-title em { font-style: italic; color: var(--gold); }
-.path-copy {
-  font-size: 0.92rem;
-  line-height: 1.75;
-  color: rgba(247,244,239,0.6);
-  font-weight: 300;
-  margin-bottom: 1.75rem;
-  flex-grow: 1;
-}
-.path-stats {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1.75rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--rule);
-}
-.path-stat-num {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: 0.3rem;
-}
-.path-stat-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--mid);
-}
-.path-link {
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--cream);
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.path-link::after { content: '→'; transition: transform 0.2s; }
-.path-card:hover .path-link::after { transform: translateX(4px); }
-
-@media (max-width: 860px) {
-  .paths-grid { grid-template-columns: 1fr; }
-}
 </style>
 </head>
 <body>
@@ -1628,10 +1522,12 @@ footer {
 <nav id="mainNav">
   <a href="index.html" class="wordmark"><img src="Uplyft_Logo.png" alt="Uplyft Talent" style="height:85px;width:auto;display:block;"></a>
   <ul class="nav-links">
-    <li><a href="candidate-sourcing.html">Candidate Sourcing</a></li>
-    <li><a href="lead-generation.html">New Business</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="#problem">The Problem</a></li>
+    <li><a href="#solution">How It Works</a></li>
+    <li><a href="#pricing">Pricing</a></li>
     <li><a href="who-its-for.html">Who It's For</a></li>
-    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="lead-generation.html">New Business →</a></li>
   </ul>
   <a href="book-a-demo.html" class="nav-cta">Book a Demo</a>
   <div class="hamburger" id="hamburger">
@@ -1648,17 +1544,17 @@ footer {
     <div class="hero-left">
       <div class="hero-kicker reveal">
         <div class="kicker-dot"></div>
-        <span class="kicker-text">Autonomous Growth Platform</span>
+        <span class="kicker-text">Candidate Generation System</span>
       </div>
       <h1 class="hero-display reveal reveal-delay-1">
-        One engine.<br>Two ways to <em>grow</em><br>your agency.
+        Your recruiters<br>deserve a <em>smarter</em><br>pipeline.
       </h1>
       <p class="hero-sub reveal reveal-delay-2">
-        Uplyft Talent runs AI-led LinkedIn outreach in the background of your business, every single day. It sources candidates faster than any recruiter can manually, and prospects new clients more consistently than any desk ever will on its own. Built from first principles for recruitment, there's nothing else on the market that works this way.
+        Stop spending three hours a day on LinkedIn. Uplyft Talent deploys our proprietary AI engine to automate candidate search, outreach, and relationship-building, all at a depth of sophistication that no competitor has come close to replicating.
       </p>
       <div class="hero-ctas reveal reveal-delay-3">
         <a href="book-a-demo.html" class="btn-primary">Book a Demo</a>
-        <a href="#paths" class="btn-ghost">See both engines</a>
+        <a href="#solution" class="btn-ghost">See how it works</a>
       </div>
     </div>
     <div class="hero-right reveal reveal-delay-2">
@@ -1667,43 +1563,43 @@ footer {
           <div class="hc-dot"></div>
           <div class="hc-dot"></div>
           <div class="hc-dot"></div>
-          <span class="hc-title">Live Overview</span>
+          <span class="hc-title">Campaign Dashboard</span>
         </div>
         <div class="hc-body">
-          <div class="hc-label">Running Right Now</div>
+          <div class="hc-label">Active Campaign</div>
           <div class="hc-campaign">
-            <div class="hc-field">Candidate Campaigns <span>4 active</span></div>
-            <div class="hc-field">New Business Campaigns <span>3 active</span></div>
-            <div class="hc-field">Agents Deployed <span>7</span></div>
+            <div class="hc-field">Job Title <span>Senior PLC Engineer</span></div>
+            <div class="hc-field">Location <span>West Midlands, UK</span></div>
+            <div class="hc-field">Salary Range <span>£55k – £70k</span></div>
           </div>
           <div class="hc-stats">
-            <div class="hc-stat"><div class="sv">300+</div><div class="sl">Sent Daily</div></div>
-            <div class="hc-stat"><div class="sv">99</div><div class="sl">Accepted</div></div>
-            <div class="hc-stat"><div class="sv">20</div><div class="sl">Warm Contacts</div></div>
+            <div class="hc-stat"><div class="sv">140</div><div class="sl">Sent</div></div>
+            <div class="hc-stat"><div class="sv">47</div><div class="sl">Accepted</div></div>
+            <div class="hc-stat"><div class="sv">11</div><div class="sl">Contacts</div></div>
           </div>
-          <div class="hc-label">Recent Activity</div>
+          <div class="hc-label">Recent Candidates</div>
           <div class="hc-candidates">
             <div class="hc-candidate">
               <div class="candidate-avatar">JB</div>
               <div class="candidate-info">
                 <div class="candidate-name">James Barker</div>
-                <div class="candidate-role">Candidate · PLC Engineer</div>
+                <div class="candidate-role">PLC Engineer · Siemens TIA</div>
               </div>
               <div class="candidate-status status-new">New</div>
-            </div>
-            <div class="hc-candidate">
-              <div class="candidate-avatar">HP</div>
-              <div class="candidate-info">
-                <div class="candidate-name">Helen Pryce</div>
-                <div class="candidate-role">Prospect · Head of Talent</div>
-              </div>
-              <div class="candidate-status status-talking">Talking</div>
             </div>
             <div class="hc-candidate">
               <div class="candidate-avatar">SR</div>
               <div class="candidate-info">
                 <div class="candidate-name">Sarah Redmond</div>
-                <div class="candidate-role">Candidate · Controls Engineer</div>
+                <div class="candidate-role">Controls Engineer · Rockwell</div>
+              </div>
+              <div class="candidate-status status-talking">Talking</div>
+            </div>
+            <div class="hc-candidate">
+              <div class="candidate-avatar">MT</div>
+              <div class="candidate-info">
+                <div class="candidate-name">Marcus Tew</div>
+                <div class="candidate-role">Automation Lead · Beckhoff</div>
               </div>
               <div class="candidate-status status-new">New</div>
             </div>
@@ -1711,12 +1607,12 @@ footer {
         </div>
       </div>
       <div class="hero-float-1">
-        <div class="float-num">2</div>
-        <div class="float-label">engines,<br>one platform</div>
+        <div class="float-num">3hrs</div>
+        <div class="float-label">saved per<br>recruiter, daily</div>
       </div>
       <div class="hero-float-2">
         <div class="float-num" style="font-size:1.1rem; color:var(--gold); font-family:'Cormorant Garamond',serif; font-style:italic;">AI active</div>
-        <div class="float-label" style="font-size:0.65rem; color:var(--mid);">across every campaign</div>
+        <div class="float-label" style="font-size:0.65rem; color:var(--mid);">3 conversations in progress</div>
       </div>
     </div>
   </div>
@@ -1731,105 +1627,474 @@ footer {
     </div>
     <div class="proof-item">
       <div class="proof-icon">✦</div>
-      <div class="proof-text">Powered by our <strong>proprietary AI</strong>. Nothing else on the market works this way</div>
+      <div class="proof-text">Powered by our <strong>proprietary AI</strong>, built for recruitment</div>
     </div>
     <div class="proof-item">
       <div class="proof-icon">✦</div>
-      <div class="proof-text">Fully <strong>done for you</strong>, from £299/month</div>
+      <div class="proof-text">Built for <strong>specialist recruiters</strong></div>
     </div>
+  
   </div>
 </div>
 
-<!-- PATHS -->
-<section id="paths">
-  <div class="paths-header">
-    <p class="eyebrow reveal">Two Engines, One Platform</p>
-    <h2 class="headline reveal reveal-delay-1">Which side of the<br>desk needs it <em>most?</em></h2>
-    <p class="body-copy reveal reveal-delay-2" style="margin: 1.2rem auto 0; text-align:center; max-width:56ch;">Every recruitment agency runs on two things: candidates to place, and clients to place them with. Uplyft Talent automates the outreach behind both, using proprietary technology built specifically for recruitment. There's nothing else on the market that does this. Pick where to start.</p>
+<!-- PROBLEM -->
+<section id="problem">
+  <div class="problem-inner">
+    <div class="problem-left">
+      <p class="eyebrow reveal">The Problem</p>
+      <h2 class="headline reveal reveal-delay-1">Recruiters waste<br><em>3 hours</em> a day<br>on LinkedIn outreach.</h2>
+      <div class="gold-rule reveal reveal-delay-2"></div>
+      <p class="body-copy reveal reveal-delay-3">
+        Manual LinkedIn outreach is slow, inconsistent, and expensive. While your consultants are copying and pasting the same message for the fortieth time, candidates are being placed by competitors moving faster.
+      </p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-card reveal reveal-delay-1">
+        <div class="pnum">3hrs</div>
+        <p>Average time a recruiter spends on manual LinkedIn outreach every single day</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-2">
+        <div class="pnum">12%</div>
+        <p>Typical connection-to-conversation rate when outreach is manual and generic</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-3">
+        <div class="pnum">£600+</div>
+        <p>Cost of recruiter time spent on outreach weekly, before a single call is booked</p>
+      </div>
+      <div class="problem-card reveal reveal-delay-4">
+        <div class="pnum">0</div>
+        <p>Placements made while your consultant copy-pastes the same message for the 40th time</p>
+      </div>
+    </div>
   </div>
-  <div class="paths-grid">
+</section>
 
-    <a href="candidate-sourcing.html" class="path-card reveal reveal-delay-1">
-      <p class="path-eyebrow">Candidate Sourcing</p>
-      <h3 class="path-title">Find better candidates, <em>without the hours</em> on LinkedIn.</h3>
-      <p class="path-copy">Stop spending three hours a day on manual outreach. Our AI searches, connects, and builds genuine rapport with candidates, delivering warm, ready-to-call contacts straight into your portal.</p>
-      <div class="path-stats">
-        <div>
-          <div class="path-stat-num">3hrs</div>
-          <div class="path-stat-label">Saved daily</div>
+<!-- SOLUTION -->
+<section id="solution">
+  <div class="solution-inner">
+    <div class="solution-top">
+      <div>
+        <p class="eyebrow reveal">The Solution</p>
+        <h2 class="headline reveal reveal-delay-1">Done for you.<br>Built to last.<br><em>Your brief. Our engine.</em></h2>
+        <div class="gold-rule reveal reveal-delay-2"></div>
+        <p class="body-copy reveal reveal-delay-3">
+          Uplyft Talent is a fully managed service. We handle the entire setup, then run it for you with total visibility built in. You give us the brief; our proprietary AI does the rest. Competing tools hand you a login and wish you luck. We don't.
+        </p>
+      </div>
+      <div class="solution-flow reveal reveal-delay-1">
+        <div class="flow-step">
+          <div class="step-num">i.</div>
+          <div class="step-content">
+            <strong>We set everything up for you</strong>
+            <span>We handle the entire build and configuration: agents, AI, portal. Done for you, not handed to you as a DIY tool</span>
+          </div>
         </div>
-        <div>
-          <div class="path-stat-num">20+</div>
-          <div class="path-stat-label">Sent per day</div>
+        <div class="flow-step">
+          <div class="step-num">ii.</div>
+          <div class="step-content">
+            <strong>Your team gets fully trained</strong>
+            <span>We walk every recruiter through the portal so they can see exactly what's happening, who's been contacted, how conversations are progressing, and the moment someone's ready for a call</span>
+          </div>
         </div>
-        <div>
-          <div class="path-stat-num">£15k+</div>
-          <div class="path-stat-label">Avg. placement</div>
+        <div class="flow-step">
+          <div class="step-num">iii.</div>
+          <div class="step-content">
+            <strong>The agent searches and connects</strong>
+            <span>Automatically finds and connects with the right candidates on LinkedIn daily, mimicking natural human behaviour to stay within platform tolerances and best practices</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">iv.</div>
+          <div class="step-content">
+            <strong>Our AI builds the relationship</strong>
+            <span>When a candidate accepts, our AI takes over and conducts nuanced, context-aware dialogue that competitors simply cannot replicate</span>
+          </div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">v.</div>
+          <div class="step-content">
+            <strong>Warm candidates land in your portal</strong>
+            <span>Name, role, email, phone: tracked, organised, and ready for your recruiter to close. All in one place</span>
+          </div>
         </div>
       </div>
-      <span class="path-link">Explore candidate sourcing</span>
-    </a>
+    </div>
+  </div>
+</section>
 
-    <a href="lead-generation.html" class="path-card reveal reveal-delay-2">
-      <p class="path-eyebrow">New Business Generation</p>
-      <h3 class="path-title">Win new clients, <em>without relying</em> on someone finding the time.</h3>
-      <p class="path-copy">You already know you should be prospecting more. Our AI reaches out to hiring managers and decision-makers every day, whether the desk is quiet or slammed, so growth stops depending on discipline.</p>
-      <div class="path-stats">
-        <div>
-          <div class="path-stat-num">£299</div>
-          <div class="path-stat-label">Per agent / mo</div>
-        </div>
-        <div>
-          <div class="path-stat-num">20+</div>
-          <div class="path-stat-label">Sent per day</div>
-        </div>
-        <div>
-          <div class="path-stat-num">£10k–£100k+</div>
-          <div class="path-stat-label">Client lifetime value</div>
-        </div>
+<!-- HOW IT WORKS -->
+<section id="how">
+  <div class="how-inner">
+    <div class="how-header">
+      <p class="eyebrow reveal">How It Works</p>
+      <h2 class="headline reveal reveal-delay-1">Three proprietary layers.<br>One <em>seamless</em> system.</h2>
+      <p class="body-copy reveal reveal-delay-2" style="margin: 1rem auto 0; text-align:center; max-width:52ch;">Others offer basic automation. Uplyft Talent is built on three interlocking proprietary systems, engineered from the ground up for recruitment, and impossible to replicate by stitching together off-the-shelf tools.</p>
+    </div>
+    <div class="how-grid">
+      <div class="how-card reveal reveal-delay-1">
+        <div class="how-card-icon">⬡</div>
+        <h3>The Agent</h3>
+        <p>Our intelligent sourcing engine. Runs silently in the background, executing precision LinkedIn searches and dispatching connection requests daily, while mimicking natural human behaviour patterns to stay within platform tolerances and best practices. No flags, no restrictions, no account risk.</p>
       </div>
-      <span class="path-link">Explore new business generation</span>
-    </a>
+      <div class="how-card reveal reveal-delay-2">
+        <div class="how-card-icon">Σ</div>
+        <h3>The AI</h3>
+        <p>Our proprietary conversational AI. Built exclusively for recruitment dialogue, it reads context, intent, and sentiment simultaneously, crafting replies that feel human, not automated. Nothing else on the market operates at this depth.</p>
+      </div>
+      <div class="how-card reveal reveal-delay-3">
+        <div class="how-card-icon">◈</div>
+        <h3>The Portal</h3>
+        <p>Everything in one place. See live campaign status, monitor agent activity, track every candidate's progress, and get notified the moment someone's ready to talk, all from a single, purpose-built interface any recruiter can use from day one. No juggling tools, no spreadsheets. One dashboard, complete visibility.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PIPELINE FLOW -->
+<section style="background:var(--ink); padding:8rem 3rem; border-top:1px solid var(--rule);">
+  <div style="max-width:1200px; margin:0 auto;">
+
+    <div style="text-align:center; margin-bottom:5rem;">
+      <p class="eyebrow reveal">How Your Pipeline Grows</p>
+      <h2 class="headline reveal reveal-delay-1">Three steps. Fully automatic.<br><em>Always running.</em></h2>
+      <p class="body-copy reveal reveal-delay-2" style="margin:1.2rem auto 0; text-align:center; max-width:52ch;">From brief to warm candidate in your portal, without your recruiters lifting a finger. Here's exactly what happens, every single day.</p>
+    </div>
+
+    <!-- 3 step flow -->
+    <div class="reveal reveal-delay-1" style="display:grid; grid-template-columns: 1fr 40px 1fr 40px 1fr; gap:0; align-items:start; margin-bottom:5rem;">
+
+      <!-- Step 1 -->
+      <div style="background:var(--charcoal); border:1px solid var(--gold-rule); border-radius:var(--radius); padding:2.5rem; position:relative;">
+        <div style="position:absolute; top:-14px; left:2rem; background:var(--gold); color:var(--ink); font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; padding:0.3rem 0.9rem; border-radius:2px;">Step 1</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; color:var(--gold); line-height:1; margin-bottom:1.25rem;">Brief</div>
+        <h4 style="font-size:1rem; font-weight:500; color:var(--cream); margin-bottom:0.75rem;">You tell us who you want</h4>
+        <p style="font-size:0.875rem; line-height:1.75; color:rgba(247,244,239,0.55);">Job title, sector, location, seniority level, you tell us the criteria and we configure the campaign for you. Takes a two-minute brief. That's the only input required from your team.</p>
+      </div>
+
+      <!-- Arrow -->
+      <div style="display:flex; align-items:center; justify-content:center; padding-top:5rem;">
+        <div style="color:var(--gold); font-size:1.2rem; opacity:0.5;">→</div>
+      </div>
+
+      <!-- Step 2 -->
+      <div style="background:var(--charcoal); border:1px solid var(--gold-rule); border-radius:var(--radius); padding:2.5rem; position:relative;">
+        <div style="position:absolute; top:-14px; left:2rem; background:var(--gold); color:var(--ink); font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; padding:0.3rem 0.9rem; border-radius:2px;">Step 2</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; color:var(--gold); line-height:1; margin-bottom:1.25rem;">Find & Warm</div>
+        <h4 style="font-size:1rem; font-weight:500; color:var(--cream); margin-bottom:0.75rem;">Our technology does the rest</h4>
+        <p style="font-size:0.875rem; line-height:1.75; color:rgba(247,244,239,0.55);">Our agent finds matching candidates on LinkedIn and sends connection requests, mimicking natural human behaviour, within platform best practices. When a candidate accepts, our AI takes over: engaging them in professional, personalised conversation, building genuine rapport, and steering them naturally toward sharing their contact details.</p>
+      </div>
+
+      <!-- Arrow -->
+      <div style="display:flex; align-items:center; justify-content:center; padding-top:5rem;">
+        <div style="color:var(--gold); font-size:1.2rem; opacity:0.5;">→</div>
+      </div>
+
+      <!-- Step 3 -->
+      <div style="background:var(--charcoal); border:1px solid var(--gold-rule); border-radius:var(--radius); padding:2.5rem; position:relative;">
+        <div style="position:absolute; top:-14px; left:2rem; background:var(--gold); color:var(--ink); font-size:0.65rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:600; padding:0.3rem 0.9rem; border-radius:2px;">Step 3</div>
+        <div style="font-family:'Cormorant Garamond',serif; font-size:2.5rem; font-weight:300; color:var(--gold); line-height:1; margin-bottom:1.25rem;">Delivered</div>
+        <h4 style="font-size:1rem; font-weight:500; color:var(--cream); margin-bottom:0.75rem;">Warm candidate. Portal. Recruiter notified.</h4>
+        <p style="font-size:0.875rem; line-height:1.75; color:rgba(247,244,239,0.55);">Contact details are captured automatically and added straight to your portal: name, role, email, phone. Your recruiter receives an instant notification. No chasing, no manual logging. Just a warm candidate, ready to call.</p>
+      </div>
+
+    </div>
+
+    <!-- Database growth callout -->
+    <div class="reveal reveal-delay-2" style="background:var(--charcoal2); border:1px solid var(--gold-rule); border-radius:var(--radius); padding:3.5rem 4rem; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; position:relative; overflow:hidden;">
+      <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right, transparent, var(--gold), transparent);"></div>
+
+      <div>
+        <p class="eyebrow" style="margin-bottom:1rem;">Your Database. Always Growing.</p>
+        <h3 style="font-family:'Cormorant Garamond',serif; font-size:clamp(1.8rem,3vw,2.5rem); font-weight:300; line-height:1.15; color:var(--cream); margin-bottom:1.25rem;">Effortless pipeline growth, <em>around the clock.</em></h3>
+        <p style="font-size:0.9rem; line-height:1.8; color:rgba(247,244,239,0.6);">Your agents run 24 hours a day, across every timezone. While your recruiters are with clients, sleeping, or closing deals, the system is finding, connecting, and warming candidates. Your database doesn't just grow when someone has time to work it. It grows constantly, automatically, without anyone lifting a finger.</p>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:1.25rem;">
+
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div style="width:32px; height:32px; border:1px solid var(--gold-rule); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; background:var(--gold-faint);">
+            <span style="color:var(--gold); font-size:0.8rem;">✦</span>
+          </div>
+          <div>
+            <h5 style="font-size:0.9rem; font-weight:500; color:var(--cream); margin-bottom:0.2rem;">Always on. Every timezone.</h5>
+            <p style="font-size:0.82rem; line-height:1.65; color:rgba(247,244,239,0.5);">Candidates are contacted at the right time for them, not just UK business hours. Your pipeline builds globally, around the clock.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div style="width:32px; height:32px; border:1px solid var(--gold-rule); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; background:var(--gold-faint);">
+            <span style="color:var(--gold); font-size:0.8rem;">✦</span>
+          </div>
+          <div>
+            <h5 style="font-size:0.9rem; font-weight:500; color:var(--cream); margin-bottom:0.2rem;">No data scraping. Ever.</h5>
+            <p style="font-size:0.82rem; line-height:1.65; color:rgba(247,244,239,0.5);">Every candidate in your database has actively engaged with your outreach and willingly shared their details. Fully compliant, fully consented, and far warmer than any scraped list.</p>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:1rem; align-items:flex-start;">
+          <div style="width:32px; height:32px; border:1px solid var(--gold-rule); border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; background:var(--gold-faint);">
+            <span style="color:var(--gold); font-size:0.8rem;">✦</span>
+          </div>
+          <div>
+            <h5 style="font-size:0.9rem; font-weight:500; color:var(--cream); margin-bottom:0.2rem;">A database that compounds.</h5>
+            <p style="font-size:0.82rem; line-height:1.65; color:rgba(247,244,239,0.5);">Every candidate added is an asset. The longer you run Uplyft Talent, the richer your pipeline becomes, and the faster you place.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
 
   </div>
 </section>
 
-<!-- WHY DONE FOR YOU -->
-<section style="background:var(--ink); padding:8rem 3rem;">
+<!-- ROI -->
+
+<section id="roi">
+  <div class="roi-inner">
+    <div>
+      <p class="eyebrow reveal">The Return</p>
+      <h2 class="headline reveal reveal-delay-1">One placement covers<br>each agent for<br><em>over four years.</em></h2>
+      <div class="gold-rule reveal reveal-delay-2"></div>
+      <div class="roi-stats reveal reveal-delay-3">
+        <div class="roi-stat-row">
+          <div class="roi-num">20+</div>
+          <div class="roi-desc">
+            <strong>Connections sent daily</strong>
+            Per agent, per recruiter, running continuously in the background
+          </div>
+        </div>
+        <div class="roi-stat-row">
+          <div class="roi-num">3hrs</div>
+          <div class="roi-desc">
+            <strong>Recruiter time saved daily</strong>
+            Per consultant, every day, worth £600 per week at £40 per hour
+          </div>
+        </div>
+        <div class="roi-stat-row">
+          <div class="roi-num">£15k+</div>
+          <div class="roi-desc">
+            <strong>Average placement fee</strong>
+            In engineering and technical roles, one extra per month transforms the ROI
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="roi-quote-wrap reveal reveal-delay-2">
+      <div class="roi-quote">
+        <p>"A recruiter's time is worth £40 an hour. Three hours saved per day is £600 per week, before a single extra placement is made."</p>
+      </div>
+      <p class="roi-note">
+        <strong>The risk per seat is minimal.</strong> Each agent costs £299/month: £3,588 per year. One £15k placement covers that seat for over four years. Add more agents and the cost per seat never changes, but your pipeline multiplies. Ten agents means ten times the outreach, ten times the candidate flow, and ten times the placement opportunity, at the same per-seat cost.
+      </p>
+      <a href="mailto:hello@uplyft-talent.com" class="btn-primary" style="align-self:flex-start;">Calculate Your ROI →</a>
+    </div>
+  </div>
+</section>
+
+<!-- DONE FOR YOU -->
+<section style="background:var(--ink); padding:6rem 3rem; border-top:1px solid var(--rule);">
   <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center;">
     <div>
       <p class="eyebrow reveal">The Service Model</p>
       <h2 class="headline reveal reveal-delay-1">Not just software.<br>A <em>done-for-you</em><br>growth system.</h2>
       <div class="gold-rule reveal reveal-delay-2"></div>
       <p class="body-copy reveal reveal-delay-3">
-        Most tools hand you a login and wish you luck. Uplyft Talent is different. We configure the entire platform around your agency, set up every agent, and train your whole team before we hand anything over. Whichever engine you start with, the model is the same: fully managed, always running, built to last.
+        Most recruitment tools expect you to figure it out yourself. Uplyft Talent is different. We configure the entire platform around your agency, set up every agent, and don't hand it over until it's working. Then we train your whole team, so every recruiter has complete visibility, tracking candidate progress and reading their own analytics from day one.
       </p>
-      <div class="hero-ctas reveal reveal-delay-4" style="margin-top:2rem;">
-        <a href="book-a-demo.html" class="btn-primary">Book a Demo</a>
-      </div>
+      <p class="body-copy reveal reveal-delay-4" style="margin-top:1rem;">
+        After that, we stay involved. Your dedicated account lead checks in weekly, reviews your performance data, and helps you get more from the platform over time. This is not a subscription you buy and forget. It's a pipeline you build together.
+      </p>
     </div>
     <div class="reveal reveal-delay-2">
       <div style="display:flex; flex-direction:column; gap:1rem;">
-        <div style="background:var(--charcoal); border:1px solid var(--rule); border-radius:var(--radius); padding:1.5rem 1.75rem; display:flex; gap:1.25rem; align-items:flex-start;">
+
+        <div style="background:var(--charcoal); border:1px solid var(--rule); border-radius:var(--radius); padding:1.5rem 1.75rem; display:flex; gap:1.25rem; align-items:flex-start; transition: border-color 0.3s;" onmouseenter="this.style.borderColor='rgba(201,168,76,0.25)'" onmouseleave="this.style.borderColor='rgba(247,244,239,0.08)'">
           <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">1</div>
           <div>
             <h4 style="font-size:0.9rem;font-weight:500;color:var(--cream);margin-bottom:0.3rem;">Full Setup & Configuration</h4>
-            <p style="font-size:0.82rem;line-height:1.65;color:rgba(247,244,239,0.55);">We build everything: agents, AI, portal, campaign structure, for candidates, clients, or both.</p>
+            <p style="font-size:0.82rem;line-height:1.65;color:rgba(247,244,239,0.55);">We build everything. Agents, AI, portal, campaign structure. Ready to go before you touch a thing.</p>
           </div>
         </div>
-        <div style="background:var(--charcoal); border:1px solid var(--rule); border-radius:var(--radius); padding:1.5rem 1.75rem; display:flex; gap:1.25rem; align-items:flex-start;">
+
+        <div style="background:var(--charcoal); border:1px solid var(--rule); border-radius:var(--radius); padding:1.5rem 1.75rem; display:flex; gap:1.25rem; align-items:flex-start; transition: border-color 0.3s;" onmouseenter="this.style.borderColor='rgba(201,168,76,0.25)'" onmouseleave="this.style.borderColor='rgba(247,244,239,0.08)'">
           <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">2</div>
           <div>
             <h4 style="font-size:0.9rem;font-weight:500;color:var(--cream);margin-bottom:0.3rem;">Team Training</h4>
-            <p style="font-size:0.82rem;line-height:1.65;color:rgba(247,244,239,0.55);">Every consultant is trained on the portal: reading live campaign status, checking analytics, and seeing exactly where every candidate and prospect stands.</p>
+            <p style="font-size:0.82rem;line-height:1.65;color:rgba(247,244,239,0.55);">Every recruiter is trained on the portal, how to read live campaign status, check analytics, and see exactly where each candidate stands.</p>
           </div>
         </div>
-        <div style="background:var(--charcoal); border:1px solid var(--rule); border-radius:var(--radius); padding:1.5rem 1.75rem; display:flex; gap:1.25rem; align-items:flex-start;">
+
+        <div style="background:var(--charcoal); border:1px solid var(--rule); border-radius:var(--radius); padding:1.5rem 1.75rem; display:flex; gap:1.25rem; align-items:flex-start; transition: border-color 0.3s;" onmouseenter="this.style.borderColor='rgba(201,168,76,0.25)'" onmouseleave="this.style.borderColor='rgba(247,244,239,0.08)'">
           <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">3</div>
           <div>
             <h4 style="font-size:0.9rem;font-weight:500;color:var(--cream);margin-bottom:0.3rem;">Ongoing Account Management</h4>
-            <p style="font-size:0.82rem;line-height:1.65;color:rgba(247,244,239,0.55);">Your dedicated account lead reviews performance weekly and helps you get more from the platform over time.</p>
+            <p style="font-size:0.82rem;line-height:1.65;color:rgba(247,244,239,0.55);">Your dedicated account lead reviews performance weekly, flags opportunities, and ensures the platform keeps delivering as your team grows.</p>
           </div>
+        </div>
+
+        <div style="background:var(--charcoal); border:1px solid var(--rule); border-radius:var(--radius); padding:1.5rem 1.75rem; display:flex; gap:1.25rem; align-items:flex-start; transition: border-color 0.3s;" onmouseenter="this.style.borderColor='rgba(201,168,76,0.25)'" onmouseleave="this.style.borderColor='rgba(247,244,239,0.08)'">
+          <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">◈</div>
+          <div>
+            <h4 style="font-size:0.9rem;font-weight:500;color:var(--cream);margin-bottom:0.3rem;">One Portal. Everything Inside.</h4>
+            <p style="font-size:0.82rem;line-height:1.65;color:rgba(247,244,239,0.55);">Campaigns, agent activity, candidate profiles, conversation history, pipeline analytics, and weekly reports, all in a single interface. Nothing lives outside it.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY -->
+<section id="technology" style="background:var(--ink2); padding:8rem 3rem; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:4rem;">
+      <p class="eyebrow reveal">The Technology</p>
+      <h2 class="headline reveal reveal-delay-1">Others have tried.<br><em>None have got there.</em></h2>
+      <p class="body-copy reveal reveal-delay-2" style="margin:1.2rem auto 0; text-align:center; max-width:54ch;">
+        Uplyft Talent is not a wrapper around an existing tool. Every layer of the platform, from the agent's behavioural targeting to the AI's multi-turn dialogue engine, was built in-house, for recruitment, from first principles.
+      </p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:1.25rem;">
+
+      <div class="how-card reveal reveal-delay-1" style="display:flex; gap:1.5rem; align-items:flex-start;">
+        <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">◈</div>
+        <div>
+          <h4 style="font-size:0.95rem;font-weight:500;color:var(--cream);margin-bottom:0.4rem;">Contextual Sentiment Mapping</h4>
+          <p style="font-size:0.875rem;line-height:1.7;color:rgba(247,244,239,0.55);">Our AI doesn't just read replies. It maps emotional register, hesitation signals, and intent depth across multi-turn threads. Responses are calibrated in real time. No competitor does this.</p>
+        </div>
+      </div>
+
+      <div class="how-card reveal reveal-delay-2" style="display:flex; gap:1.5rem; align-items:flex-start;">
+        <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">⬡</div>
+        <div>
+          <h4 style="font-size:0.95rem;font-weight:500;color:var(--cream);margin-bottom:0.4rem;">Behavioural Safe-Mode Throttling</h4>
+          <p style="font-size:0.875rem;line-height:1.7;color:rgba(247,244,239,0.55);">Our AI mimics natural human behaviour, varying the timing, pacing, and volume of outreach in patterns indistinguishable from a real recruiter. It operates within platform best practices and tolerance thresholds at all times, protecting your account while maximising reach. This is not a fixed daily limit. It's intelligent, adaptive behaviour.</p>
+        </div>
+      </div>
+
+      <div class="how-card reveal reveal-delay-3" style="display:flex; gap:1.5rem; align-items:flex-start;">
+        <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">Σ</div>
+        <div>
+          <h4 style="font-size:0.95rem;font-weight:500;color:var(--cream);margin-bottom:0.4rem;">Recruitment-Native Language Model</h4>
+          <p style="font-size:0.875rem;line-height:1.7;color:rgba(247,244,239,0.55);">Our AI was trained on millions of professional recruitment conversations. It understands sector-specific nuance, candidate psychology, and the precise moment to ask for contact details. Generic AI cannot replicate this.</p>
+        </div>
+      </div>
+
+      <div class="how-card reveal reveal-delay-4" style="display:flex; gap:1.5rem; align-items:flex-start;">
+        <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:0.9rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">◉</div>
+        <div>
+          <h4 style="font-size:0.95rem;font-weight:500;color:var(--cream);margin-bottom:0.4rem;">Unified Candidate Graph Database</h4>
+          <p style="font-size:0.875rem;line-height:1.7;color:rgba(247,244,239,0.55);">Every candidate interaction feeds a structured relational graph, tracking engagement history, sentiment trajectory, and qualification status. Your pipeline becomes an asset that compounds over time, not a list of names.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="pricing-inner">
+    <div class="pricing-header">
+      <p class="eyebrow reveal">Investment</p>
+      <h2 class="headline reveal reveal-delay-1">£299 per agent,<br>per month. <em>Simple.</em></h2>
+      <p class="body-copy reveal reveal-delay-2" style="margin: 1.2rem auto 0; text-align:center; max-width:50ch;">One transparent price. Every seat includes the full platform, no feature gates, no hidden tiers. Scale your team and the maths scale with you.</p>
+    </div>
+
+    <!-- Per-seat calculator + Enterprise side by side -->
+    <div class="pricing-layout reveal reveal-delay-2">
+
+      <!-- Calculator card -->
+      <div class="calc-card">
+        <div class="calc-header">
+          <div class="price-tier">Per Seat Pricing</div>
+          <div class="calc-price-wrap">
+            <div class="calc-amount" id="calcAmount">£299</div>
+            <div class="calc-period">per month</div>
+          </div>
+          <div class="calc-agent-label">for <span id="agentCount">1</span> agent<span id="agentPlural"></span></div>
+        </div>
+
+        <div class="calc-slider-wrap">
+          <div class="slider-labels">
+            <span>1 agent</span>
+            <span>25 agents</span>
+          </div>
+          <input type="range" min="1" max="25" value="1" class="agent-slider" id="agentSlider">
+          <div class="slider-roi" id="sliderRoi">One £15k placement covers <strong>4.2 years</strong> of this seat.</div>
+        </div>
+
+        <div class="calc-divider"></div>
+
+        <ul class="price-features" style="margin-bottom:2rem;">
+          <li>Fully managed setup: we build and configure everything</li>
+          <li>Full team training so your recruiters have complete visibility over every campaign</li>
+          <li>Proprietary AI candidate conversations</li>
+          <li>Smart behavioural throttling: safe, consistent, automatic</li>
+          <li>All-in-one portal: campaigns, agents, candidates & analytics in one place</li>
+          <li>Real-time pipeline analytics & conversion tracking</li>
+          <li>Weekly performance reports, delivered to your inbox</li>
+          <li>Dedicated account lead included</li>
+          <li>No setup fees, cancel any time</li>
+        </ul>
+
+        <a href="mailto:hello@uplyft-talent.com?subject=Uplyft Talent Enquiry" class="price-btn price-btn-solid">Get Started</a>
+      </div>
+
+      <!-- Enterprise card -->
+      <div class="price-card enterprise-card reveal reveal-delay-3">
+        <div class="enterprise-badge">25+ Agents</div>
+        <div class="price-tier" style="margin-top:1rem;">Enterprise</div>
+        <div class="price-amount" style="font-size:2.5rem; margin: 1rem 0 0.25rem;">Custom</div>
+        <div class="price-period" style="margin-bottom:2rem; padding-bottom:2rem; border-bottom:1px solid var(--rule);">pricing on request</div>
+        <p style="font-size:0.875rem; line-height:1.7; color:rgba(247,244,239,0.55); margin-bottom:1.75rem;">For recruitment operations running 25 or more agents. Bespoke pricing, architecture, and a service wrapper built around your agency's specific needs.</p>
+        <ul class="price-features" style="margin-bottom:2rem;">
+          <li>Everything in standard seats</li>
+          <li>Dedicated account lead</li>
+          <li>Bespoke campaign architecture</li>
+          <li>Executive strategy sessions</li>
+          <li>Custom integrations</li>
+          <li>SLA-backed support</li>
+        </ul>
+        <a href="mailto:hello@uplyft-talent.com?subject=Uplyft Talent Enterprise Enquiry" class="price-btn price-btn-outline">Talk to Us</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section id="audience">
+  <div class="audience-inner">
+    <div>
+      <p class="eyebrow reveal">Who It's For</p>
+      <h2 class="headline reveal reveal-delay-1">Built for specialist<br>recruitment agencies who<br>place <em>high-value</em> candidates.</h2>
+      <div class="gold-rule reveal reveal-delay-2"></div>
+      <p class="body-copy reveal reveal-delay-3">
+        Uplyft Talent is designed for agencies where placement fees justify serious investment in pipeline quality. If your average fee is £10k or above, the ROI writes itself.
+      </p>
+    </div>
+    <div class="audience-list">
+      <div class="audience-item reveal reveal-delay-1">
+        <div class="audience-icon"><span>E</span></div>
+        <div class="audience-content">
+          <h4>Engineering &amp; Technical Recruitment</h4>
+          <p>Automation engineers, PLC programmers, robotics specialists: high placement fees, specialist talent, and hard to source manually. Our primary market.</p>
+        </div>
+      </div>
+      <div class="audience-item reveal reveal-delay-2">
+        <div class="audience-icon"><span>T</span></div>
+        <div class="audience-content">
+          <h4>Technology &amp; IT Recruitment</h4>
+          <p>Software developers, infrastructure engineers, data specialists: a competitive market where speed to candidate is everything.</p>
+        </div>
+      </div>
+      <div class="audience-item reveal reveal-delay-3">
+        <div class="audience-icon"><span>F</span></div>
+        <div class="audience-content">
+          <h4>Finance &amp; Professional Services</h4>
+          <p>Accountants, analysts, compliance professionals: relationship-first outreach where tone, precision, and timing matter most.</p>
         </div>
       </div>
     </div>
@@ -1840,10 +2105,10 @@ footer {
 <section id="cta">
   <div class="cta-inner">
     <div class="cta-vertical-line reveal"></div>
-    <h2 class="display reveal reveal-delay-1">Ready to put growth<br>on <em>autopilot?</em></h2>
+    <h2 class="display reveal reveal-delay-1">Ready to build<br>a <em>better</em> pipeline?</h2>
     <div class="gold-rule reveal reveal-delay-2" style="margin: 2rem auto;"></div>
     <p class="body-copy reveal reveal-delay-3" style="margin: 0 auto; text-align:center;">
-      Book a 30-minute demo and we'll show you exactly how Uplyft Talent would work for your desk: candidate sourcing, new business, or both.
+      Book a 30-minute demo and we'll show you exactly how Uplyft Talent would work for your desk, with a live campaign walkthrough tailored to your sector.
     </p>
     <a href="book-a-demo.html" class="btn-primary reveal reveal-delay-4" style="margin-top: 2.5rem; display:inline-block;">Book a Demo</a>
     <div class="reveal reveal-delay-5" style="margin-top:1.5rem;">
@@ -1857,12 +2122,14 @@ footer {
 <footer>
   <div class="footer-inner">
     <ul class="footer-links">
-      <li><a href="candidate-sourcing.html">Candidate Sourcing</a></li>
-      <li><a href="lead-generation.html">New Business</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#problem">The Problem</a></li>
+      <li><a href="#solution">How It Works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
       <li><a href="who-its-for.html">Who It's For</a></li>
+      <li><a href="lead-generation.html">New Business</a></li>
       <li><a href="faq.html">FAQ</a></li>
       <li><a href="trust-compliance.html">Trust &amp; Compliance</a></li>
-      <li><a href="book-a-demo.html">Book a Demo</a></li>
       <li><a href="mailto:hello@uplyft-talent.com">Contact</a></li>
     </ul>
     <span class="footer-legal">© 2025 Uplyft Talent. All rights reserved.</span>
@@ -1914,6 +2181,48 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+// Pricing calculator
+const slider = document.getElementById('agentSlider');
+const calcAmount = document.getElementById('calcAmount');
+const agentCount = document.getElementById('agentCount');
+const agentPlural = document.getElementById('agentPlural');
+const sliderRoi = document.getElementById('sliderRoi');
+
+function updateCalc() {
+  const agents = parseInt(slider.value);
+  const monthlyTotal = agents * 299;
+  const annualTotal = monthlyTotal * 12;
+  const placementFee = 15000;
+
+  // Per-agent payback: always the same regardless of team size
+  const perAgentAnnual = 299 * 12; // £3,588
+  const yearsPerAgent = (placementFee / perAgentAnnual).toFixed(1); // always 4.2
+
+  calcAmount.textContent = '£' + monthlyTotal.toLocaleString('en-GB');
+  agentCount.textContent = agents;
+  agentPlural.textContent = agents === 1 ? '' : 's';
+
+  // Update slider fill
+  const pct = ((agents - 1) / 24) * 100;
+  slider.style.background = `linear-gradient(to right, var(--gold) ${pct}%, rgba(247,244,239,0.08) ${pct}%)`;
+
+  // ROI message: per agent payback is constant, team multiplier is the upside
+  let roiMsg = '';
+  if (agents === 1) {
+    roiMsg = `Each agent costs £299/month. One £15k placement covers <strong>${yearsPerAgent} years</strong> per agent. The risk is minimal.`;
+  } else {
+    roiMsg = `Each agent still costs £299/month. One placement covers <strong>${yearsPerAgent} years</strong> per seat. With ${agents} agents you have <strong>${agents}× the pipeline</strong> and ${agents}× the placement opportunity. Annual subscription: £${annualTotal.toLocaleString('en-GB')}.`;
+  }
+
+  sliderRoi.innerHTML = roiMsg;
+}
+
+if (slider) {
+  slider.addEventListener('input', updateCalc);
+  slider.style.background = `linear-gradient(to right, var(--gold) 0%, rgba(247,244,239,0.08) 0%)`;
+  updateCalc();
+}
+
 // Hamburger menu
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
@@ -1921,6 +2230,7 @@ const navLinks = document.querySelector('.nav-links');
 hamburger.addEventListener('click', () => {
   const isOpen = navLinks.classList.toggle('mobile-open');
 });
+// Add demo button to mobile menu if not already there
 if (!navLinks.querySelector('.mobile-demo-btn')) {
   const demoBtn = document.createElement('a');
   demoBtn.href = 'book-a-demo.html';
@@ -1928,6 +2238,7 @@ if (!navLinks.querySelector('.mobile-demo-btn')) {
   demoBtn.className = 'mobile-demo-btn';
   navLinks.appendChild(demoBtn);
 }
+// Close menu when a link is clicked
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('mobile-open');

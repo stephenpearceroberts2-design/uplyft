@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Uplyft Talent: Autonomous Growth for Recruitment Agencies</title>
-<meta name="description" content="One AI-led platform, two engines of growth: find better candidates faster, and win new clients without your desk ever having to stop and prospect. Fully managed, from £299/month.">
+<title>Uplyft Talent: Who It's For</title>
+<meta name="description" content="Built for specialist recruitment agencies who want to win new clients faster, place candidates faster, and grow revenue, without adding headcount or hours to the desk.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -1344,7 +1344,7 @@ footer {
   .how-header { margin-bottom: 2rem; }
   .how-card { padding: 1.5rem; }
 
-  /* Pipeline flow, step cards */
+  /* Pipeline flow: step cards */
   .steps-section-grid {
     grid-template-columns: 1fr !important;
     gap: 1rem !important;
@@ -1407,7 +1407,7 @@ footer {
   }
   .footer-links { flex-wrap: wrap; gap: 1rem; }
 
-  /* Inline style sections, force single column */
+  /* Inline style sections: force single column */
   section > div[style*="grid-template-columns: 1fr 1fr"],
   section > div > div[style*="grid-template-columns: 1fr 1fr"],
   section > div[style*="grid-template-columns:1fr 1fr"] {
@@ -1435,13 +1435,13 @@ footer {
   * { max-width: 100%; }
   img, video, iframe { max-width: 100%; height: auto; }
 
-  /* Hero card mockup, hide on mobile */
+  /* Hero card mockup: hide on mobile */
   .hero-card { display: none; }
 }
 </style>
 <style>
 @media (max-width: 640px) {
-  /* Pipeline 3-step flow, override inline grid */
+  /* Pipeline 3-step flow: override inline grid */
   .reveal[style*="grid-template-columns: 1fr 40px"] {
     display: flex !important;
     flex-direction: column !important;
@@ -1452,7 +1452,7 @@ footer {
     display: none !important;
   }
 
-  /* Database callout, 2 col to 1 col */
+  /* Database callout: 2 col to 1 col */
   .reveal[style*="grid-template-columns:1fr 1fr"],
   div[style*="grid-template-columns:1fr 1fr"],
   div[style*="grid-template-columns: 1fr 1fr"] {
@@ -1496,7 +1496,7 @@ footer {
   /* Stat cards */
   .hc-stats { grid-template-columns: repeat(3, 1fr); }
 
-  /* Audience items, remove hover indent */
+  /* Audience items: remove hover indent */
   .audience-item:hover { padding-left: 0 !important; }
 
   /* CTA vertical line */
@@ -1513,109 +1513,115 @@ footer {
 }
 
 /* ══════════════════════════════
-   PATHS (homepage split)
+   FIT CHECKLIST
 ══════════════════════════════ */
-#paths {
+#fit {
   background: var(--ink2);
   padding: 8rem 3rem;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
-.paths-header { text-align: center; margin-bottom: 4rem; }
-.paths-header .eyebrow { justify-content: center; display: flex; }
-.paths-grid {
+.fit-inner {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 6rem;
+  align-items: start;
 }
-.path-card {
+.fit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.fit-item {
+  display: flex;
+  gap: 1.1rem;
+  align-items: flex-start;
   background: var(--charcoal);
   border: 1px solid var(--rule);
   border-radius: var(--radius);
-  padding: 3rem 2.5rem;
-  position: relative;
-  overflow: hidden;
-  text-decoration: none;
+  padding: 1.4rem 1.6rem;
+  transition: border-color 0.3s;
+}
+.fit-item:hover { border-color: var(--gold-rule); }
+.fit-icon {
+  width: 28px; height: 28px;
+  border: 1px solid var(--gold-rule);
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
-  transition: border-color 0.3s, transform 0.3s;
-}
-.path-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(to right, transparent, var(--gold), transparent);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-.path-card:hover {
-  border-color: var(--gold-rule);
-  transform: translateY(-4px);
-}
-.path-card:hover::before { opacity: 1; }
-.path-eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--gold-faint);
   color: var(--gold);
-  margin-bottom: 1.25rem;
+  font-size: 0.75rem;
+  margin-top: 0.1rem;
 }
-.path-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.8rem, 2.6vw, 2.3rem);
-  font-weight: 300;
-  line-height: 1.15;
-  color: var(--cream);
-  margin-bottom: 1rem;
+.fit-item p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(247,244,239,0.75);
 }
-.path-title em { font-style: italic; color: var(--gold); }
-.path-copy {
-  font-size: 0.92rem;
-  line-height: 1.75;
-  color: rgba(247,244,239,0.6);
-  font-weight: 300;
-  margin-bottom: 1.75rem;
-  flex-grow: 1;
-}
-.path-stats {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 1.75rem;
+.fit-note {
+  margin-top: 1.5rem;
   padding-top: 1.5rem;
   border-top: 1px solid var(--rule);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(247,244,239,0.45);
 }
-.path-stat-num {
+
+/* ══════════════════════════════
+   GOALS GRID
+══════════════════════════════ */
+.goal-card {
+  background: var(--charcoal);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.goal-card:hover {
+  border-color: var(--gold-rule);
+  transform: translateY(-3px);
+}
+.goal-num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 2rem;
+  font-style: italic;
   color: var(--gold);
   line-height: 1;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1.25rem;
 }
-.path-stat-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--mid);
+.goal-card h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--cream);
+  margin-bottom: 0.75rem;
 }
-.path-link {
-  font-size: 0.8rem;
+.goal-card p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: rgba(247,244,239,0.55);
+  margin-bottom: 1.25rem;
+}
+.goal-link {
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--cream);
+  color: var(--gold);
+  text-decoration: none;
   font-weight: 500;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
-.path-link::after { content: '→'; transition: transform 0.2s; }
-.path-card:hover .path-link::after { transform: translateX(4px); }
+.goal-link::after { content: '→'; transition: transform 0.2s; }
+.goal-link:hover::after { transform: translateX(3px); }
 
 @media (max-width: 860px) {
-  .paths-grid { grid-template-columns: 1fr; }
+  .fit-inner { grid-template-columns: 1fr; gap: 3rem; }
 }
 </style>
 </head>
@@ -1648,17 +1654,17 @@ footer {
     <div class="hero-left">
       <div class="hero-kicker reveal">
         <div class="kicker-dot"></div>
-        <span class="kicker-text">Autonomous Growth Platform</span>
+        <span class="kicker-text">Who It's For</span>
       </div>
       <h1 class="hero-display reveal reveal-delay-1">
-        One engine.<br>Two ways to <em>grow</em><br>your agency.
+        Built for agencies<br>who want to <em>grow</em><br>faster than they are.
       </h1>
       <p class="hero-sub reveal reveal-delay-2">
-        Uplyft Talent runs AI-led LinkedIn outreach in the background of your business, every single day. It sources candidates faster than any recruiter can manually, and prospects new clients more consistently than any desk ever will on its own. Built from first principles for recruitment, there's nothing else on the market that works this way.
+        Uplyft Talent is built specifically for specialist recruitment agencies: places where a faster placement or a new client relationship is worth real money, and where growth keeps losing out to the demands of the desk.
       </p>
       <div class="hero-ctas reveal reveal-delay-3">
         <a href="book-a-demo.html" class="btn-primary">Book a Demo</a>
-        <a href="#paths" class="btn-ghost">See both engines</a>
+        <a href="#fit" class="btn-ghost">See if you're a fit</a>
       </div>
     </div>
     <div class="hero-right reveal reveal-delay-2">
@@ -1667,52 +1673,44 @@ footer {
           <div class="hc-dot"></div>
           <div class="hc-dot"></div>
           <div class="hc-dot"></div>
-          <span class="hc-title">Live Overview</span>
+          <span class="hc-title">Agency Snapshot</span>
         </div>
         <div class="hc-body">
-          <div class="hc-label">Running Right Now</div>
+          <div class="hc-label">A Typical Growing Desk</div>
           <div class="hc-campaign">
-            <div class="hc-field">Candidate Campaigns <span>4 active</span></div>
-            <div class="hc-field">New Business Campaigns <span>3 active</span></div>
-            <div class="hc-field">Agents Deployed <span>7</span></div>
+            <div class="hc-field">Sector <span>Engineering &amp; Technical</span></div>
+            <div class="hc-field">Avg. Placement Fee <span>£15k+</span></div>
+            <div class="hc-field">Avg. Client Value <span>£10k–£100k+</span></div>
           </div>
           <div class="hc-stats">
+            <div class="hc-stat"><div class="sv">2</div><div class="sl">Engines Running</div></div>
             <div class="hc-stat"><div class="sv">300+</div><div class="sl">Sent Daily</div></div>
-            <div class="hc-stat"><div class="sv">99</div><div class="sl">Accepted</div></div>
             <div class="hc-stat"><div class="sv">20</div><div class="sl">Warm Contacts</div></div>
           </div>
           <div class="hc-label">Recent Activity</div>
           <div class="hc-candidates">
             <div class="hc-candidate">
-              <div class="candidate-avatar">JB</div>
+              <div class="candidate-avatar">MT</div>
               <div class="candidate-info">
-                <div class="candidate-name">James Barker</div>
-                <div class="candidate-role">Candidate · PLC Engineer</div>
+                <div class="candidate-name">Marcus Tew</div>
+                <div class="candidate-role">Candidate · Automation Lead</div>
               </div>
               <div class="candidate-status status-new">New</div>
             </div>
             <div class="hc-candidate">
-              <div class="candidate-avatar">HP</div>
+              <div class="candidate-avatar">CL</div>
               <div class="candidate-info">
-                <div class="candidate-name">Helen Pryce</div>
-                <div class="candidate-role">Prospect · Head of Talent</div>
+                <div class="candidate-name">Claire Lundy</div>
+                <div class="candidate-role">Prospect · Managing Director</div>
               </div>
               <div class="candidate-status status-talking">Talking</div>
-            </div>
-            <div class="hc-candidate">
-              <div class="candidate-avatar">SR</div>
-              <div class="candidate-info">
-                <div class="candidate-name">Sarah Redmond</div>
-                <div class="candidate-role">Candidate · Controls Engineer</div>
-              </div>
-              <div class="candidate-status status-new">New</div>
             </div>
           </div>
         </div>
       </div>
       <div class="hero-float-1">
-        <div class="float-num">2</div>
-        <div class="float-label">engines,<br>one platform</div>
+        <div class="float-num">£10k+</div>
+        <div class="float-label">avg. fee is<br>where it pays off</div>
       </div>
       <div class="hero-float-2">
         <div class="float-num" style="font-size:1.1rem; color:var(--gold); font-family:'Cormorant Garamond',serif; font-style:italic;">AI active</div>
@@ -1727,11 +1725,11 @@ footer {
   <div class="proof-inner">
     <div class="proof-item">
       <div class="proof-icon">✦</div>
-      <div class="proof-text"><strong>20+ connections</strong> sent per agent, per day</div>
+      <div class="proof-text">Built specifically for <strong>specialist recruitment agencies</strong></div>
     </div>
     <div class="proof-item">
       <div class="proof-icon">✦</div>
-      <div class="proof-text">Powered by our <strong>proprietary AI</strong>. Nothing else on the market works this way</div>
+      <div class="proof-text">Works for <strong>candidate sourcing</strong>, <strong>new business</strong>, or both</div>
     </div>
     <div class="proof-item">
       <div class="proof-icon">✦</div>
@@ -1740,96 +1738,111 @@ footer {
   </div>
 </div>
 
-<!-- PATHS -->
-<section id="paths">
-  <div class="paths-header">
-    <p class="eyebrow reveal">Two Engines, One Platform</p>
-    <h2 class="headline reveal reveal-delay-1">Which side of the<br>desk needs it <em>most?</em></h2>
-    <p class="body-copy reveal reveal-delay-2" style="margin: 1.2rem auto 0; text-align:center; max-width:56ch;">Every recruitment agency runs on two things: candidates to place, and clients to place them with. Uplyft Talent automates the outreach behind both, using proprietary technology built specifically for recruitment. There's nothing else on the market that does this. Pick where to start.</p>
-  </div>
-  <div class="paths-grid">
+<!-- GOALS -->
+<section style="background:var(--ink); padding:8rem 3rem;">
+  <div style="max-width:1200px; margin:0 auto;">
+    <div style="text-align:center; margin-bottom:4rem;">
+      <p class="eyebrow reveal">What Growing Agencies Use It For</p>
+      <h2 class="headline reveal reveal-delay-1">Three problems.<br>One <em>platform.</em></h2>
+      <p class="body-copy reveal reveal-delay-2" style="margin:1.2rem auto 0; text-align:center; max-width:56ch;">Whichever is holding your agency back right now, Uplyft Talent was built to solve it without adding headcount or hours to the desk.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem;">
 
-    <a href="candidate-sourcing.html" class="path-card reveal reveal-delay-1">
-      <p class="path-eyebrow">Candidate Sourcing</p>
-      <h3 class="path-title">Find better candidates, <em>without the hours</em> on LinkedIn.</h3>
-      <p class="path-copy">Stop spending three hours a day on manual outreach. Our AI searches, connects, and builds genuine rapport with candidates, delivering warm, ready-to-call contacts straight into your portal.</p>
-      <div class="path-stats">
-        <div>
-          <div class="path-stat-num">3hrs</div>
-          <div class="path-stat-label">Saved daily</div>
-        </div>
-        <div>
-          <div class="path-stat-num">20+</div>
-          <div class="path-stat-label">Sent per day</div>
-        </div>
-        <div>
-          <div class="path-stat-num">£15k+</div>
-          <div class="path-stat-label">Avg. placement</div>
-        </div>
+      <div class="goal-card reveal reveal-delay-1">
+        <div class="goal-num">i.</div>
+        <h3>Win new business faster</h3>
+        <p>Every agency knows it should be prospecting more consistently. Uplyft Talent reaches out to hiring managers and decision-makers every day, so your pipeline of new clients doesn't depend on someone finding the time.</p>
+        <a href="lead-generation.html" class="goal-link">See new business generation</a>
       </div>
-      <span class="path-link">Explore candidate sourcing</span>
-    </a>
 
-    <a href="lead-generation.html" class="path-card reveal reveal-delay-2">
-      <p class="path-eyebrow">New Business Generation</p>
-      <h3 class="path-title">Win new clients, <em>without relying</em> on someone finding the time.</h3>
-      <p class="path-copy">You already know you should be prospecting more. Our AI reaches out to hiring managers and decision-makers every day, whether the desk is quiet or slammed, so growth stops depending on discipline.</p>
-      <div class="path-stats">
-        <div>
-          <div class="path-stat-num">£299</div>
-          <div class="path-stat-label">Per agent / mo</div>
-        </div>
-        <div>
-          <div class="path-stat-num">20+</div>
-          <div class="path-stat-label">Sent per day</div>
-        </div>
-        <div>
-          <div class="path-stat-num">£10k–£100k+</div>
-          <div class="path-stat-label">Client lifetime value</div>
-        </div>
+      <div class="goal-card reveal reveal-delay-2">
+        <div class="goal-num">ii.</div>
+        <h3>Find and place candidates faster</h3>
+        <p>Stop losing candidates to competitors who move quicker. Uplyft Talent searches, connects, and builds rapport with candidates around the clock, delivering warm, ready-to-call contacts straight into your portal.</p>
+        <a href="candidate-sourcing.html" class="goal-link">See candidate sourcing</a>
       </div>
-      <span class="path-link">Explore new business generation</span>
-    </a>
 
+      <div class="goal-card reveal reveal-delay-3">
+        <div class="goal-num">iii.</div>
+        <h3>Grow revenue without growing headcount</h3>
+        <p>More clients and faster placements both move the same number: revenue per desk. Run one engine or both, and let the outreach that used to eat hours run in the background instead, for a fixed monthly cost.</p>
+        <a href="index.html" class="goal-link">See both engines</a>
+      </div>
+
+    </div>
   </div>
 </section>
 
-<!-- WHY DONE FOR YOU -->
-<section style="background:var(--ink); padding:8rem 3rem;">
-  <div style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:6rem; align-items:center;">
+<!-- FIT CHECKLIST -->
+<section id="fit">
+  <div class="fit-inner">
     <div>
-      <p class="eyebrow reveal">The Service Model</p>
-      <h2 class="headline reveal reveal-delay-1">Not just software.<br>A <em>done-for-you</em><br>growth system.</h2>
+      <p class="eyebrow reveal">Is It Right For Your Agency?</p>
+      <h2 class="headline reveal reveal-delay-1">Built for agencies<br>with <em>real value</em><br>on the line.</h2>
       <div class="gold-rule reveal reveal-delay-2"></div>
       <p class="body-copy reveal reveal-delay-3">
-        Most tools hand you a login and wish you luck. Uplyft Talent is different. We configure the entire platform around your agency, set up every agent, and train your whole team before we hand anything over. Whichever engine you start with, the model is the same: fully managed, always running, built to last.
+        Uplyft Talent works best where a single win, a placement or a new client, is worth serious money. If that describes your agency, the maths behind £299 a month is straightforward.
       </p>
-      <div class="hero-ctas reveal reveal-delay-4" style="margin-top:2rem;">
-        <a href="book-a-demo.html" class="btn-primary">Book a Demo</a>
+      <p class="fit-note reveal reveal-delay-4">
+        It's built for specialist agencies with meaningful fees, not high-volume, low-margin temp or contract desks where the economics work differently. If you're not sure which camp you're in, ask us on a call and we'll give you a straight answer.
+      </p>
+    </div>
+    <div class="fit-list reveal reveal-delay-2">
+      <div class="fit-item">
+        <div class="fit-icon">✓</div>
+        <p>Your average placement fee or client value is £10k or more</p>
+      </div>
+      <div class="fit-item">
+        <div class="fit-icon">✓</div>
+        <p>You operate in a specialist sector where candidates and clients are hard to reach manually</p>
+      </div>
+      <div class="fit-item">
+        <div class="fit-icon">✓</div>
+        <p>Your consultants' time is better spent closing than searching LinkedIn</p>
+      </div>
+      <div class="fit-item">
+        <div class="fit-icon">✓</div>
+        <p>New business development keeps slipping down the priority list</p>
+      </div>
+      <div class="fit-item">
+        <div class="fit-icon">✓</div>
+        <p>You want growth that doesn't depend on hiring another consultant</p>
       </div>
     </div>
-    <div class="reveal reveal-delay-2">
-      <div style="display:flex; flex-direction:column; gap:1rem;">
-        <div style="background:var(--charcoal); border:1px solid var(--rule); border-radius:var(--radius); padding:1.5rem 1.75rem; display:flex; gap:1.25rem; align-items:flex-start;">
-          <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">1</div>
-          <div>
-            <h4 style="font-size:0.9rem;font-weight:500;color:var(--cream);margin-bottom:0.3rem;">Full Setup & Configuration</h4>
-            <p style="font-size:0.82rem;line-height:1.65;color:rgba(247,244,239,0.55);">We build everything: agents, AI, portal, campaign structure, for candidates, clients, or both.</p>
-          </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section id="audience">
+  <div class="audience-inner">
+    <div>
+      <p class="eyebrow reveal">Sectors We Know Best</p>
+      <h2 class="headline reveal reveal-delay-1">Specialist sectors<br>with <em>high-value</em><br>relationships.</h2>
+      <div class="gold-rule reveal reveal-delay-2"></div>
+      <p class="body-copy reveal reveal-delay-3">
+        Uplyft Talent performs best in sectors where relationships are hard-won and worth protecting. These are the three we know deepest, though the platform works anywhere the fees justify it.
+      </p>
+    </div>
+    <div class="audience-list">
+      <div class="audience-item reveal reveal-delay-1">
+        <div class="audience-icon"><span>E</span></div>
+        <div class="audience-content">
+          <h4>Engineering &amp; Technical Recruitment</h4>
+          <p>Automation engineers, PLC programmers, robotics specialists: high placement fees, specialist talent, and hard to source manually. Our primary market.</p>
         </div>
-        <div style="background:var(--charcoal); border:1px solid var(--rule); border-radius:var(--radius); padding:1.5rem 1.75rem; display:flex; gap:1.25rem; align-items:flex-start;">
-          <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">2</div>
-          <div>
-            <h4 style="font-size:0.9rem;font-weight:500;color:var(--cream);margin-bottom:0.3rem;">Team Training</h4>
-            <p style="font-size:0.82rem;line-height:1.65;color:rgba(247,244,239,0.55);">Every consultant is trained on the portal: reading live campaign status, checking analytics, and seeing exactly where every candidate and prospect stands.</p>
-          </div>
+      </div>
+      <div class="audience-item reveal reveal-delay-2">
+        <div class="audience-icon"><span>T</span></div>
+        <div class="audience-content">
+          <h4>Technology &amp; IT Recruitment</h4>
+          <p>Software developers, infrastructure engineers, data specialists: a competitive market where speed to candidate and speed to client is everything.</p>
         </div>
-        <div style="background:var(--charcoal); border:1px solid var(--rule); border-radius:var(--radius); padding:1.5rem 1.75rem; display:flex; gap:1.25rem; align-items:flex-start;">
-          <div style="width:36px;height:36px;border:1px solid var(--gold-rule);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--gold);flex-shrink:0;background:var(--gold-faint);">3</div>
-          <div>
-            <h4 style="font-size:0.9rem;font-weight:500;color:var(--cream);margin-bottom:0.3rem;">Ongoing Account Management</h4>
-            <p style="font-size:0.82rem;line-height:1.65;color:rgba(247,244,239,0.55);">Your dedicated account lead reviews performance weekly and helps you get more from the platform over time.</p>
-          </div>
+      </div>
+      <div class="audience-item reveal reveal-delay-3">
+        <div class="audience-icon"><span>F</span></div>
+        <div class="audience-content">
+          <h4>Finance &amp; Professional Services</h4>
+          <p>Accountants, analysts, compliance professionals: relationship-first outreach where tone, precision, and timing matter most on both sides of the desk.</p>
         </div>
       </div>
     </div>
@@ -1840,10 +1853,10 @@ footer {
 <section id="cta">
   <div class="cta-inner">
     <div class="cta-vertical-line reveal"></div>
-    <h2 class="display reveal reveal-delay-1">Ready to put growth<br>on <em>autopilot?</em></h2>
+    <h2 class="display reveal reveal-delay-1">Sound like<br>your <em>agency?</em></h2>
     <div class="gold-rule reveal reveal-delay-2" style="margin: 2rem auto;"></div>
     <p class="body-copy reveal reveal-delay-3" style="margin: 0 auto; text-align:center;">
-      Book a 30-minute demo and we'll show you exactly how Uplyft Talent would work for your desk: candidate sourcing, new business, or both.
+      Book a 30-minute demo and we'll show you exactly how Uplyft Talent would work for your desk, candidate sourcing, new business, or both.
     </p>
     <a href="book-a-demo.html" class="btn-primary reveal reveal-delay-4" style="margin-top: 2.5rem; display:inline-block;">Book a Demo</a>
     <div class="reveal reveal-delay-5" style="margin-top:1.5rem;">
